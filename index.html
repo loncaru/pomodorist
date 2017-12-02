@@ -15,17 +15,23 @@
     </header>
     <main>
         <div id="description">
-            <div>
-                <p><strong>Pomodoro Technique</strong><a href="https://en.wikipedia.org/wiki/Pomodoro_Technique"> Post-Impressionist</a> The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s.[1] The technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks. These intervals are named pomodoros, the plural in English of the Italian word pomodoro (tomato), after the tomato-shaped kitchen timer that Cirillo used as a university student.</p>
+            <div id="text">
+                <p><strong>Pomodoro Technique</strong><a href="https://en.wikipedia.org/wiki/Pomodoro_Technique"> Post-Impressionist</a> The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. The technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks. These intervals are named pomodoros, the plural in English of the Italian word pomodoro (tomato), after the tomato-shaped kitchen timer that Cirillo used as a university student.</p>
                 <br>
                 <p>If You want to know more about Pomodoro, please type Pomodoro in Google &#x270C;</p>
                 <form onsubmit="sayThankYou()">
-                    <input type="button" value="Start" id="start">
-                    <input type="button" value="Pausa" id="pausa">
-                    <input type="button" value="Continue" id="continue">
-                    <input type="button" value="Restart" id="restart">
+                    <input type="button" class="button1" value="Start" id="start" onclick="counter()">
+                    <input type="button" class="button2" value="Pausa" id="pausa">
+                    <input type="button" class="button3" value="Continue" id="continue">
+                    <input type="button" class="button4" value="Restart" id="restart" onclick="restart()">
+                    <input type="button" class="button5" value="Stop" id="stop" onclick="stop()">
                 </form>
                 <br>
+                <div id="timer">
+                    <span id="minutes">25</span>
+                    <span id="middle">:</span>
+                    <span id="seconds">00</span>
+                </div>
                 <p id="countdownPlaceholder">
             </div>
         </div>
