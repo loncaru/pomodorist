@@ -1,4 +1,4 @@
-var defaultTime = 1500;
+var defaultTime = 30;
 var mins;
 var secs;
 var countdownID;
