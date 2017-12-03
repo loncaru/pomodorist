@@ -24,7 +24,7 @@ function counter() {
 
     if (defaultTime == 0) {
         audioF.play();
-        stop();
+        end();
 
     }
 
@@ -49,6 +49,7 @@ function start() {
 
 function pausa() {
     clearInterval(countdownID);
+    audioC.pause();
 
 }
 
@@ -62,6 +63,10 @@ function stop() {
     minutes.innerHTML = mins;
     seconds.innerHTML = "0" + secs;
     audioC.pause();
-    audioF.pause();
+}
+
+function end() {
+    clearInterval(countdownID);
+    audioC.pause();
 }
 console.log("script loaded ...")
