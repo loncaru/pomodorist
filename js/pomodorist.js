@@ -1,4 +1,4 @@
-var defaultTime = 1500;
+var defaultTime = 5;
 var mins;
 var secs;
 var countdownID;
@@ -42,7 +42,7 @@ function counter() {
 
 function start() {
     if (defaultTime == 0) {
-        stop()
+        defaultTime = 1500;
         start()
 
     } else {
