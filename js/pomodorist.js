@@ -1,11 +1,11 @@
-var defaultTime = 1500;
+var defaultTime = 31;
 var mins;
 var secs;
 var countdownID;
 var minutes = document.getElementById("minutes");
 var seconds = document.getElementById("seconds");
-var audioC = document.getElementById("song1");
-var audioF = document.getElementById("song2");
+var audioC = document.getElementById("songC");
+var audioF = document.getElementById("songF");
 
 var starter = document.getElementById("btnStart");
 starter.addEventListener("click", start, false);
@@ -64,6 +64,7 @@ function stop() {
     minutes.innerHTML = mins;
     seconds.innerHTML = "0" + secs;
     audioC.pause();
+    audioF.pause();
 }
 
 function end() {
