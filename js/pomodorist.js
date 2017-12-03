@@ -1,4 +1,4 @@
-var defaultTime = 30;
+var defaultTime = 1500;
 var mins;
 var secs;
 var countdownID;
@@ -41,11 +41,18 @@ function counter() {
 }
 
 function start() {
-    clearInterval(countdownID);
-    countdownID = setInterval(counter, 1000);
-    audioC.pause();
-    audioF.pause();
+    if (defaultTime == 0) {
+        stop()
+        start()
+
+    } else {
+        clearInterval(countdownID);
+        countdownID = setInterval(counter, 1000);
+        audioC.pause();
+        audioF.pause();
+    }
 }
+
 
 function pausa() {
     clearInterval(countdownID);
