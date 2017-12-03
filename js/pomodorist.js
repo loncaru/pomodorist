@@ -1,9 +1,11 @@
-var bigTime = 1500;
+var defaultTime = 1500;
 var mins;
 var secs;
 var countdownID;
 var minutes = document.getElementById("minutes");
 var seconds = document.getElementById("seconds");
+var audioC = document.getElementById("song1");
+var audioF = document.getElementById("song2");
 
 var starter = document.getElementById("btnStart");
 starter.addEventListener("click", start, false);
@@ -11,25 +13,38 @@ starter.addEventListener("click", start, false);
 var stop1 = document.getElementById("btnStop");
 stop1.addEventListener("click", stop, false);
 
-var reset = document.getElementById("btnRestart");
-reset.addEventListener("click", resetart, false);
 
 function counter() {
-    bigTime--;
-    console.log(bigTime)
-    mins = Math.floor(bigTime / 60);
-    secs = bigTime - mins * 60;
+    defaultTime--;
+    console.log(defaultTime)
+    mins = Math.floor(defaultTime / 60);
+    secs = defaultTime - mins * 60;
     minutes.innerHTML = (mins < 10 ? '0' : '') + mins;
     seconds.innerHTML = (secs < 10 ? '0' : '') + secs;
 
-    if (bigTime == 0) {
+    if (defaultTime == 0) {
+        audioF.play();
         stop();
+
+    }
+
+    if (defaultTime <= 30 && defaultTime > 10 && defaultTime % 2 == 0) {
+        document.getElementById("timer").style.color = "orange";
+
+
+    } else if (defaultTime <= 10 && defaultTime % 2 == 0) {
+        audioC.play();
+        document.getElementById("timer").style.color = "#F00";
+    } else {
+        document.getElementById("timer").style.color = "#FFF";
     }
 }
 
 function start() {
     clearInterval(countdownID);
     countdownID = setInterval(counter, 1000);
+    audioC.pause();
+    audioF.pause();
 }
 
 function pausa() {
@@ -39,22 +54,14 @@ function pausa() {
 
 function stop() {
     clearInterval(countdownID);
-    bigTime = 1500;
-    var mins = Math.floor(bigTime / 60);
-    var secs = bigTime - mins * 60;
+    defaultTime = 1500;
+    var mins = Math.floor(defaultTime / 60);
+    var secs = defaultTime - mins * 60;
     minutes = document.getElementById("minutes");
     seconds = document.getElementById("seconds");
     minutes.innerHTML = mins;
     seconds.innerHTML = "0" + secs;
-
-}
-
-function
-continue () {
-
-
+    audioC.pause();
+    audioF.pause();
 }
 console.log("script loaded ...")
-
-//clearInterval(countdownID);
-//countdownID = setInterval(counter, 1000);

@@ -16,6 +16,11 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+
+    color: red;
+}
+
 p {
     color: white;
     padding: 10px;
@@ -31,6 +36,10 @@ p {
 text {
 
     border-style: ridge;
+}
+
+#message-dir {
+    text-align: center;
 }
 
 .button1 {
@@ -60,33 +69,6 @@ text {
 }
 
 .button3 {
-    background-color: #555555;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-
-.button4 {
-    background-color: orange;
-    color: black;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-
-.button5 {
     background-color: #f44336;
     border: none;
     color: white;

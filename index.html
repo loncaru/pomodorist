@@ -7,25 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="css/pomodorist.css" type="text/css">
+    <link rel="icon" type="image/png" href="https://lh4.ggpht.com/eaKKhSXDW7JHsMhJnW4UOxl6V_AifpnPTgHjtW6LmJGC5edHW4jPfJBuujzknTCoQA=w170">
 </head>
 
 <body>
     <header>
-        <h1>Pomodoro</h1>
-    </header>
+        <h1>Pomodoro</h1></header>
     <main>
         <div id="description">
             <div id="text">
-                <p><strong>Pomodoro Technique</strong><a href="https://en.wikipedia.org/wiki/Pomodoro_Technique"> Post-Impressionist</a> The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. The technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks. These intervals are named pomodoros, the plural in English of the Italian word pomodoro (tomato), after the tomato-shaped kitchen timer that Cirillo used as a university student.</p>
-                <br>
-                <p>If You want to know more about Pomodoro, please type Pomodoro in Google &#x270C;</p>
+                <p><strong>Pomodoro Technique</strong><a href="https://en.wikipedia.org/wiki/Pomodoro_Technique"> Post-Impressionist</a> The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. The technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks. These intervals are named pomodoros, the plural in English of the Italian word pomodoro (tomato), after the tomato-shaped kitchen timer that Cirillo used as a university student.The technique has been widely popularized by dozens of apps and websites providing timers and instructions. Closely related to concepts such as timeboxing and iterative and incremental development used in software design, the method has been adopted in pair programming contexts</p>
+            </div>
+            <div>
+                <p id="message-dir">If You want to know more about Pomodoro, please type Pomodoro in Google &#x270C;</p>
+            </div>
+            <div id="inputId">
                 <form>
-                    <input type="button" class="button1" value="Start" onclick="start()">
-                    <input type="button" class="button5" value="Stop/Restart" id="btnStop" onclick="stop()">
+                    <input type="button" class="button1" value="Start/Continue" onclick="start()">
+                    <input type="button" class="button3" value="Stop/Restart" id="btnStop" onclick="stop()">
                     <input type="button" class="button2" value="Pausa" id="btnPausa" onclick="pausa()">
-                    <input type="button" class="button3" value="Continue" id="btnContinue" onclick="continue()">
                 </form>
-                <br>
                 <div id="timer">
                     <span id="minutes">25</span>
                     <span id="middle">:</span>
@@ -34,12 +35,13 @@
                 <p>
             </div>
         </div>
-        <div id="divider"></div>
         <div id="picture">
             <img src="Pomodoro.png" onmousemove="pomodoro(event)">
             <p id="pictureMessage"></p>
         </div>
     </main>
+    <audio src="countdown.mp3" type="audio/mpeg" id="song1">Your browser does not support the audio element.</audio>
+    <audio src="final.mp3" type="audio/mpeg" id="song2">Your browser does not support the audio element.</audio>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
