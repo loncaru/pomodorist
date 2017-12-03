@@ -56,6 +56,7 @@ function pausa() {
 function stop() {
     clearInterval(countdownID);
     defaultTime = 1500;
+    document.getElementById("timer").style.color = "#FFF"; //bug was present if we stop counter when he was red
     var mins = Math.floor(defaultTime / 60);
     var secs = defaultTime - mins * 60;
     minutes = document.getElementById("minutes");
